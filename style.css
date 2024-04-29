@@ -39,14 +39,10 @@ a:link, a:visited{
 .head_main .right_side{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 50ch;
 }
 
-.right_side .head_links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 35ch;
-}
 
 /** HEADER END **/
 
