@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2rem;
+    background-image: url('./img/view-white-crumpled-paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* All <a> tags without decorations */
+a:link, a:visited{
+    color: #000;
+    text-decoration: none;
+}
+
+/** HEADER START **/
+
+.head_main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head_main .left_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head_main .right_side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50ch;
+}
+/** HEADER END **/
+
+.about_container {
+    flex: 3;
+}
+
+.map_container {
+    height: 100%;
+}
+
+.about_desc {
+    text-align: center;
+    width: 120ch;
+    align-self: center;
+    padding: 2rem 0;
+}
+
+/** FOOTER START **/
+.foot_main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+.foot_media {
+    display: flex;
+    justify-content: space-between;
+    width: 15ch;
+}
+
+.foot_media .bx {
+    font-size: 2.3rem;
+}
+
+.foot_requisites
+{
+    display: flex;
+    justify-content: space-between;
+    width: 65ch;
+}
+/** FOOTER END **/
