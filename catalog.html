@@ -6,28 +6,31 @@
     <title>ArtKey</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./style_catalog.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style_catalog.css">
 </head>
 <body>
     <header class="head_main">
         <div class="left_side">
-            <a href="./index.html"><h1 class="head_title">ArtKey</h1></a>
+            <a href="index.html"><h1 class="head_title">ArtKey</h1></a>
         </div>
         <nav class="right_side">
-                <a class = "head_links link" href="./index.html">Main</a>
+                <a class = "head_links link" href="index.html">Main</a>
                 <a class = "head_links link" href="./catalog.html">Catalog</a>
-                <a class = "head_links link" href="./about.html">About Us</a>
+                <a class = "head_links link" href="about.html">About Us</a>
                 <div class="shopping">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="quantity">0</span>
                 </div>
         </nav>
     </header>
+<!--форма. Надо куда нить засунуть чтоб красиво было -->
     <form action="#" id="products">
-        <input type="hidden" id="id" >
-        <input type="hidden" id="name">
-        <input type="hidden" id="image">
-        <input type="hidden" id="price">
+        <input id="id" >
+        <input id="name">
+        <input id="image">
+        <input id="price">
+        <button type="submit">Submit</button>
     </form>
     <div class="list"></div>
 
@@ -55,6 +58,7 @@
     </script>
     <!--End of Tawk.to Script-->
 </body>
-    <script src="./catalog_script.js"></script>
+    <script src="catalog_script.js"></script>
+    <script src="database/database_script.js"></script>
 </body>
 </html>

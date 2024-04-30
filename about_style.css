@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     font-family: 'Amatic SC', sans-serif;
     font-size: 2rem;
-    background-image: url('./img/view-white-crumpled-paper.jpg');
+    background-image: url('img/view-white-crumpled-paper.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
