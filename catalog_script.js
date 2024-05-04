@@ -13,66 +13,38 @@ openShopping.addEventListener("click", () => {
 closeShopping.addEventListener("click", () => {
     body.classList.remove("active");
 });
-
-
-let products = [
-    {
-        id: 1,
-        name: "PRODUCT 1",
-        images: "1.png",
-        price: 50
-    },
-    {
-        id: 2,
-        name: "PRODUCT 2",
-        images: "2.png",
-        price: 100
-    },
-    {
-        id: 3,
-        name: "PRODUCT 3",
-        images: "3.png",
-        price: 80
-    },
-    {
-        id: 4,
-        name: "PRODUCT 4",
-        images: "4.png",
-        price: 75
-    },
-
-    {
-        id: 5,
-        name: "PRODUCT 5",
-        images: "5.png",
-        price: 10
-    },
-    {
-        id: 6,
-        name: "PRODUCT 6",
-        images: "6.png",
-        price: 120
-    },
-]
-
-let listCards = [];
-
-const initApp = () => {
-    products.forEach((value, key) => {
-        let newDiv = document.createElement("div");
-        newDiv.classList.add("item");
-        newDiv.innerHTML = `
+// функция которая срабатывает после всего файла html - получает список товаров и отображает в блоке
+$(document).ready(function(){
+    $.ajax({
+        url: 'database/php/select.php', // Замените на путь к вашему PHP-скрипту
+        type: 'GET',
+        dataType: 'json',
+        success: function(response) {
+            // Обработка успешного ответа
+            products = response
+                products.forEach((value, key) => {
+                    let newDiv = document.createElement("div");
+                    newDiv.classList.add("item");
+                    newDiv.innerHTML = `
         <img src = "img/${value.images}">
         <div class = "title">${value.name}</div>
         <div class = "price">${value.price.toLocaleString()}$</div>
         <button onclick="addToCard(${key})">Add To Card</
         button>
         `
-        list.appendChild(newDiv);
+            list.appendChild(newDiv);});
+            console.log(response); // Вывод данных в консоль для проверки
+            // Далее вы можете выполнить любые операции с полученными данными
+        },
+        error: function(xhr, status, error) {
+            // Обработка ошибки
+            console.error(error); // Вывод ошибки в консоль для отладки
+        }
     });
-}
+});
 
-initApp();
+
+let listCards = [];
 
 const addToCard = (key) => {
     if(listCards[key] == null)
